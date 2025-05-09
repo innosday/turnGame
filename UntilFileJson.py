@@ -7,5 +7,5 @@ def ReadJson(filepath:str) -> dict:
         return json.load(file)
 
 def WriteJson(filepath:str,jsonDirt:dict):
-    with open(os.path.join(workspace,filepath),'w') as file:
-        json.dump(jsonDirt,file,indent=4)
+    with open(os.path.join(workspace,filepath),'w',encoding='utf-8-sig') as file:
+        json.dump(jsonDirt,file,indent=4,ensure_ascii=False)
